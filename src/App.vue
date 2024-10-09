@@ -1,5 +1,5 @@
 <script setup>
-import ButtonWrapper from "src/components/ButtonWrapper.vue";
+import ButtonWrapper from "@/components/ButtonWrapper.vue";
 </script>
 
 <template>
