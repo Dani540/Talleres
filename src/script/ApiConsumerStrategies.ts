@@ -273,10 +273,6 @@ class AnimeRecommendationStrategy implements Strategy{
         return `<br><strong>${title}:</strong> ${content || 'N/A'}`;
     }
 
-    private formatArraySection(title: string, array: any[], key: string): string {
-        return array && array.length > 0 ? `<br><strong>${title}:</strong> ${array.map(item => item[key]).join(', ')}` : '';
-    }
-
     private formatImageSection(images: any): string {
         return images && images['jpg'] ? `<br><img src="${images['jpg'].image_url}" alt="Image">` : '';
     }
@@ -421,7 +417,7 @@ class MangaRandomStrategy implements Strategy {
         return body.join("<br>");
     }
     public async fetchData(url: string): Promise<string> {
-        let body = 'No data fetched yet';
+        let body: string;
 
         try {
             const response = await fetch(url);

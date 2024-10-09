@@ -138,11 +138,9 @@ class Formatter {
     }
 
     static formatImageSection(images: Record<string, Image> | AnimeImages): string {
-        // Verifica si las imágenes tienen el formato esperado en `Record<string, Image>`
         if ('jpg' in images && images.jpg) {
             return `<br><img src="${images.jpg.image_url}" alt="Image">`;
         }
-        // Si tiene la estructura de AnimeImages
         if ('images' in images && images.images?.jpg) {
             return `<br><img src="${images.images.jpg.image_url}" alt="Image">`;
         }
@@ -179,7 +177,7 @@ class CountryPopulationStrategy implements Strategy {
     }
 
     async fetchData(url: string): Promise<string> {
-        let body = 'Sin datos consumidos aún Y Y';
+        let body: string;
         try {
             const response = await fetch(url);
             const data: PopulationData = await response.json();
@@ -220,7 +218,7 @@ class AnimeRecommendationStrategy implements Strategy {
     }
 
     async fetchData(url: string): Promise<string> {
-        let body = 'Sin datos consumidos aún Y Y';
+        let body: string;
         try {
             const response = await fetch(url);
             const data: AnimeRecommendationData[] = await response.json();
@@ -255,7 +253,7 @@ class AnimeRandomStrategy implements Strategy {
     }
 
     async fetchData(url: string): Promise<string> {
-        let body = 'Aun no se fetchea Y Y';
+        let body: string;
         try {
             const response = await fetch(url);
             const data: AnimeRandomData = await response.json();
@@ -290,7 +288,7 @@ class MangaRandomStrategy implements Strategy {
     }
 
     async fetchData(url: string): Promise<string> {
-        let body = 'Aun no se fetchea Y Y';
+        let body: string;
         try {
             const response = await fetch(url);
             const data: MangaRandomData = await response.json();
