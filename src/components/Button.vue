@@ -32,4 +32,21 @@
   border: 2px solid #222222;
 }
 
+button{
+  background-color: #69c57f;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 1rem 1rem 1.5rem;
+
+  border-radius: 0.5rem;
+
+  transition: background-color 0.3s;
+}
+
+button:hover{
+  background-color: #82d790;
+}
+
 </style>
