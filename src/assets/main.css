@@ -4,4 +4,5 @@
   margin: auto;
   padding: 2rem;
   font-weight: normal;
+  min-width: 420px;
 }
