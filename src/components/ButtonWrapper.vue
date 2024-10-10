@@ -54,9 +54,9 @@ const log = ref('')
 <style scoped>
   .wrapper{
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    width: 100%;
     background-color: #152534;
   }
 
